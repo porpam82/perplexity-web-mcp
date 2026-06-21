@@ -1,7 +1,5 @@
-from perplexity_web_mcp.mcp.server import mcp
-
 mcp.run(
-    transport="sse",
+    transport="streamable-http",
     host="0.0.0.0",
-    port=8081,
+    port=8081
 )
