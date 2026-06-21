@@ -7,4 +7,4 @@ COPY mcp_http.py /opt/mcp_http.py
 EXPOSE 8080
 EXPOSE 8081
 
-CMD ["sh", "-c", "python /opt/mcp_http.py & pwm api & wait"]
+CMD ["sh", "-c", "python /opt/mcp_http.py & while true; do pwm api; echo 'API terminou. Reinício em 5 segundos...'; sleep 5; done"]
